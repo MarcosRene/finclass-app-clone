@@ -1,8 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
+import { useTheme } from 'styled-components';
+import Text from './components/Text';
 
 const App = () => {
-  return <View />;
+  const { colors } = useTheme();
+
+  return (
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: colors.background.main,
+      }}
+    >
+      <Text>Marcos</Text>
+    </View>
+  );
 };
 
 export default App;
